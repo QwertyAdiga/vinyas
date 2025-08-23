@@ -1,0 +1,152 @@
+.body{
+    background-color: #2d2d2d;
+    padding-top: 4%;
+    color: #ffffff;
+    font-family: Helvetica, Arial;
+    padding-bottom: 5%;
+}
+
+.alt-body{
+    width: 50%;
+    margin: 0 auto;
+    /* min-width: 50rem;
+    min-height: 5rem; */
+}
+
+.header{
+    height: 8%;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(111, 111, 111);
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    right: 35%;
+    left: 35%;
+    top: 1%;
+    min-width: 30rem;
+    animation: float-reverse 4s ease-in-out infinite;
+}
+
+.header a:hover{
+    box-shadow: 5px 5px 50px black;
+}
+
+.home, .book{
+    font-size: 120%;
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 5%;
+    font-size: 300%;
+}
+
+.start{
+    display: flex;
+    align-items: flex-start;
+}
+
+.image{
+    height: 10em;
+}
+
+.name{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10%;
+}
+
+.box{
+    height: 10rem;
+    width: 15rem;
+    background-color: #2d2d2d;
+    border: 7px inset black; 
+    padding: 1%;
+    border-radius: 10%;
+    margin-bottom: 10%;
+    animation: float 4s ease-in-out infinite;
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.2s;
+}
+
+.box-head{
+    font-weight: bolder;
+    font-size: 130%;
+}
+
+.box:hover{
+    height: 11rem;
+    width: 16rem;
+}
+
+#first-thought{
+    float: left;
+}
+
+#second-thought{
+    float: right;
+}
+
+.main{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(111, 111, 111);
+    align-items: center;
+    position: fixed;
+    bottom: 1%;
+    right: 25%;
+    left: 25%;
+    height: 8%;
+    animation: float-reverse 4s ease-in-out infinite;
+    min-height: 2rem;
+    min-width: 40rem;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: space-evenly;
+    flex: 1;
+}
+
+.contact-word{
+    font-size: 20px;
+    margin-left: 4%;
+}
+
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes float-reverse {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(10px); }
+  100% { transform: translateY(0px); }
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    height: 25px;
+}
+
+.line{
+    margin-top: 5%;
+    height: 1px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px darkblue, 0 0 20px blue;
+
+}
+
