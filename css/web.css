@@ -42,10 +42,11 @@
     left: 35%;
     top: 1%;
     animation: float-reverse 4s ease-in-out infinite;
+    z-index: 1000;
 }
 
 .coding, .hacking, .ai, .stock-market{
-    transition: all 0.5s ease-in-out 0.1s;
+    transition: all 0.3s ease-in-out 0.01s;
 }
 
 .coding:hover, 
@@ -60,7 +61,7 @@
     box-shadow: 5px 5px 50px black;
 }
 
-.home, .book{
+.home, .book, .blog{
     font-size: 120%;
 }
 
@@ -217,9 +218,23 @@ img {
 
 /* book */
 
+.book-title{
+    text-align: center;
+    margin-bottom: 5%;
+    font-size: 300%;
+}
+
 .current-reading{
     font-size: 1.2rem;
     font-weight: bold;
     margin-top: 10%;
-    margin-bottom: 7%;
+}
+
+.start-list-books{
+    font-size: 1.2rem;
+}
+
+.book-lists li{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
 }
