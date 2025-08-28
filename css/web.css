@@ -11,23 +11,6 @@
     margin: 0 auto;
 }
 
-.alt-body:hover + #warning-ai{
-    bottom: 20px;
-    right: 20px;
-    display:block;
-}
-
-#warning-ai{
-    background: black;
-    color: red;
-    font-weight: bold;
-    padding: 10px 15px;
-    border-radius: 8px;
-    box-shadow: 0 0 15px yellow;
-    position: fixed;
-    display: none;
-}
-
 .header{
     height: 8%;
     min-height: 50px;
@@ -41,8 +24,13 @@
     right: 35%;
     left: 35%;
     top: 1%;
-    animation: float-reverse 4s ease-in-out infinite;
+    animation: float 4s ease-in-out infinite;
     z-index: 1000;
+    font-size: 120%;
+}
+
+.header a:hover{
+    box-shadow: 5px 5px 50px black;
 }
 
 .coding, .hacking, .ai, .stock-market{
@@ -55,14 +43,6 @@
 .stock-market:hover {
     font-style: oblique;
     scale: 1.01;
-}
-
-.header a:hover{
-    box-shadow: 5px 5px 50px black;
-}
-
-.home, .book, .blog{
-    font-size: 120%;
 }
 
 .title{
@@ -78,10 +58,7 @@
 
 .my-image{
     height: 12em;
-    transition-property: all;
-    transition-duration: 1s;
-    transition-timing-function: ease-in-out;
-    transition-delay: 0.1s;
+    transition: all 0.5s ease-in-out 0.1s;
 }
 
 .my-image:hover{
@@ -94,11 +71,6 @@
     margin-top: 10%;
 }
 
-.main{
-    padding-left: 5%;
-    padding-right: 5%;
-}
-
 .footer{
     display: flex;
     flex-direction: row;
@@ -109,7 +81,7 @@
     right: 25%;
     left: 25%;
     height: 8%;
-    animation: float-reverse 4s ease-in-out infinite;
+    animation: float 4s ease-in-out infinite;
     min-height: 50px;
     min-width: 300px;
 }
@@ -123,18 +95,6 @@
 .contact-word{
     font-size: 20px;
     margin-left: 4%;
-}
-
-@keyframes float {
-  0%   { transform: translateY(0px);}
-  50%  { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
-}
-
-@keyframes float-reverse {
-  0%   { transform: translateY(0px);}
-  50%  { transform: translateY(10px);}
-  100% { transform: translateY(0px);}
 }
 
 a{
@@ -151,26 +111,6 @@ img {
     height: 1px;
     border-radius: 50%;
     box-shadow: 0 0 10px darkblue, 0 0 20px blue;
-}
-
-@media screen and (max-width: 1000px) {
-    .body{
-        padding-top: 15%;
-        padding-bottom: 15%;
-    }
-    .footer{
-        left: 0;
-        right: 0;
-        width: 100%;
-    }
-    .header{
-        left: 10%;
-        right: 10%;
-        width: 75%;
-    }
-    .alt-body{
-        width: 100%;
-    }
 }
 
 .rain {
@@ -211,18 +151,38 @@ img {
     }
 }
 
-/* book */
-
-.book-title{
-    text-align: center;
-    margin-bottom: 5%;
-    font-size: 300%;
+@keyframes float {
+  0%   { transform: translateY(0px);}
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
 }
 
-.current-reading{
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-top: 10%;
+@media screen and (max-width: 900px) {
+    .body{
+        padding-top: 25%;
+        padding-bottom: 25%;
+    }
+    .footer{
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+    .header{
+        left: 10%;
+        right: 10%;
+        width: 75%;
+    }
+    .alt-body{
+        width: 100%;
+    }
+    .rain div:nth-child(n+6){
+        display: none;
+    }
+    .rain div:nth-child(1) { display: block; left: 10vw; animation-duration: 0.8s; animation-delay: 0.3s; }
+    .rain div:nth-child(2) { display: block; left: 30vw; animation-duration: 1s; animation-delay: 0.5s; }
+    .rain div:nth-child(3) { display: block; left: 50vw; animation-duration: 1.2s; animation-delay: 0.4s; }
+    .rain div:nth-child(4) { display: block; left: 70vw; animation-duration: 1s; animation-delay: 0.7s; }
+    .rain div:nth-child(5) { display: block; left: 90vw; animation-duration: 0.9s; animation-delay: 0.2s; }
 }
 
 .start-list-books{
