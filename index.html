@@ -11,8 +11,20 @@
     gtag('config', 'G-S5QZZFBFN3');
     </script>
 
+    <meta name="description" content="Official website of Vinyas Adiga – 16-year-old from Udupi, Karnataka, India. Showcasing coding projects, AI learnings, stock market insights, ethical hacking journey, blogs, and books.">
+    <meta name="keywords" content="Vinyas Adiga, Vinyas, Adiga, Student, Udupi, Sujnan college, VKR school">
+    <meta property="og:title" content="Vinyas Adiga | Official Website">
+    <meta property="og:description" content="Explore coding projects, AI experiments, stock market ideas, and ethical hacking journey of Vinyas Adiga.">
+    <meta property="og:image" content="https://qwertyadiga.github.io/vinyas/assets/me.png">
+    <meta property="og:url" content="https://qwertyadiga.github.io/vinyas">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vinyas Adiga | Official Website">
+    <meta name="twitter:description" content="Explore coding, AI, stock market, and hacking journey of Vinyas Adiga.">
+    <meta name="twitter:image" content="https://qwertyadiga.github.io/vinyas/assets/me.png">
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enter Vinyas Adiga's mind</title>
     <link rel="stylesheet" href="css/web.css">
 </head>
@@ -46,7 +58,7 @@
                     currently
                     studying 1st PU in <a href="https://sujnanedu.org" target="_blank" alt="Sujnan website"
                         title="SET">Sujnan PU College</a> </span>
-                <span><img class="my-image" src="assets/me.png"></img></span>
+                <span><img class="my-image" src="assets/me.png" alt="Vinyas Adiga's Image"></img></span>
             </div>
             <hr class="line">
             <div class="coding">
@@ -72,10 +84,10 @@
                 <div><ol>
                     <li>Started learning about stock market when I was 15.</li><br>
                     <li>Investing through zerodha as they are an inspirational business.</li><br>
-                    <li>I first beleived that Ola Electric mobility was wonderful business.</li><br>
+                    <li>I first believed that Ola Electric mobility was a wonderful business.</li><br>
                     <li>But exited at peak bull run when I got to know more about the company.</li><br>
                     <li>Now found a wonderful small cap business called <a href="https://www.bluecloudsoftech.com/" target="_blank" 
-                    title="BCSSL">Blue Cloud Softech Solutions</a> with low valuation (Bought at &#8377;16).</li><br>
+                    title="BCSSL">Blue Cloud Softech Solutions</a> with low valuation (bought at &#8377;16).</li><br>
                     <li>Inspired by Buffet's way of investing.</li>
                     </ol>
                 </div>
@@ -98,7 +110,7 @@
                 <div class="name">Hacking :-</div><br>
                 <div><ol>
                         <li>Learning Ethical Hacking through online courses.</li><br>
-                        <li>Beleiving that prompt injection is the future SQL injection.</li><br>
+                        <li>Believing that prompt injection is the future SQL injection.</li><br>
                         <li>Interested in Cybersecurity as it will be one of the important industry in IT.</li><br>
                         <li>Hacked my friends Instagram account just for fun and then informed them.</li><br>
                         <li>Tried to hack my School and college website, but failed.</li><br>
@@ -154,6 +166,7 @@ document.querySelectorAll(".coding, .hacking, .ai, .stock-market, .my-image").fo
 </script>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
+    // Create overlay
     const popup = document.createElement("div");
     popup.style.position = "fixed";
     popup.style.top = "0";
@@ -198,7 +211,11 @@ document.addEventListener("DOMContentLoaded", () => {
     box.appendChild(closeBtn);
     box.appendChild(message);
     popup.appendChild(box);
-    document.body.appendChild(popup);
+
+    if (!localStorage.getItem("popupShown")) {
+        document.body.appendChild(popup);
+        localStorage.setItem("popupShown", "true");
+    }
 });
 </script>
 </body>
