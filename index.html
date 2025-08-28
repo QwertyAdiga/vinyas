@@ -204,6 +204,7 @@ document.addEventListener("DOMContentLoaded", () => {
     closeBtn.style.fontWeight = "bold";
     closeBtn.style.cursor = "pointer";
 
+    // Close on click
     closeBtn.addEventListener("click", () => {
         document.body.removeChild(popup);
     });
@@ -212,12 +213,12 @@ document.addEventListener("DOMContentLoaded", () => {
     box.appendChild(message);
     popup.appendChild(box);
 
-    if (!localStorage.getItem("popupShown")) {
-        document.body.appendChild(popup);
-        localStorage.setItem("popupShown", "true");
-    }
+    // ✅ Append popup so it shows every time (even after refresh)
+    document.body.appendChild(popup);
 });
 </script>
+
+
 </body>
 
 </html>
