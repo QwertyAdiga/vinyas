@@ -11,6 +11,11 @@
     margin: 0 auto;
 }
 
+main a{
+    text-decoration: underline;
+    text-decoration-color: rgb(59, 59, 243);
+}
+
 .header{
     height: 8%;
     min-height: 50px;
